@@ -1,0 +1,18 @@
+# OS / 에디터
+.DS_Store
+Thumbs.db
+.vs/
+.idea/
+.claude/
+
+# 빌드 결과
+build*/
+out/
+*.exe
+*.obj.bak
+
+# 저작권/용량 문제로 포함하지 않는 데이터 (README의 "데이터와 모델 준비" 참고)
+opengl-prototype/resources/*.data
+opengl-prototype/resources/*.txt
+opengl-prototype/resources/*.hair
+opengl-prototype/resources/*.obj

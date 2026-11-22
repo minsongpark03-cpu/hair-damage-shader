@@ -1,0 +1,30 @@
+# Unity가 만드는 폴더/파일
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emory[Cc]aptures/
+*.csproj
+*.sln
+*.slnx
+*.suo
+*.user
+*.pidb
+*.booproj
+*.pdb
+*.mdb
+UpgradeLog*.htm
+sysinfo.txt
+
+# 저작권/용량 문제로 포함하지 않는 데이터 (루트 README의 "데이터와 모델 준비" 참고)
+/Assets/StreamingAssets/HairData/*.data
+/Assets/StreamingAssets/HairData/*.data.meta
+/Assets/StreamingAssets/HairData/*.txt
+/Assets/StreamingAssets/HairData/*.hair
+/Assets/Resources/HairDemo/*.obj
+/Assets/Resources/HairDemo/*.obj.meta
+/Assets/Resources/HairDemo/Heads/*.obj
+/Assets/Resources/HairDemo/Heads/*.obj.meta
