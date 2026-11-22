@@ -12,6 +12,33 @@ Marschner 반사 모델과 멜라닌 흡수 기반 탈색 모델을 직접 구�
 
 ---
 
+## 결과
+
+> 아래 화면의 헤어 데이터와 두상 모델은 외부 자료입니다 ([THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) 참고). 셰이더, 손상 모델, UI, 포팅 코드는 직접 작성했습니다.
+
+### Unity 데모 (실시간, 슬라이더 하나로 손상도 0~100%)
+같은 모델과 같은 머리색에서 손상도만 바꾼 화면입니다. 오른쪽 패널에서 머리색, 헤어 모델, 두상, 결절성 열모증, 루트 틴트, 배경을 바꿀 수 있습니다.
+
+| 손상도 0% | 손상도 100% |
+|:---:|:---:|
+| <img src="docs/images/unity/unity-damage-0.png" width="480"> | <img src="docs/images/unity/unity-damage-100.png" width="480"> |
+
+### OpenGL 프로토타입 (왼쪽: 정상 / 오른쪽: 손상)
+같은 모델에서 손상도 0과 최대를 비교한 화면입니다. 뿌리는 짙은 색을 유지하고 끝으로 갈수록 탈색되며(유멜라닌 먼저 소실), 부피가 퍼지고 끝이 풀리고 갈라집니다.
+
+| | |
+|:---:|:---:|
+| <img src="docs/images/opengl/compare-1-long-bangs.png" width="480"> | <img src="docs/images/opengl/compare-2-long-parted.png" width="480"> |
+| <img src="docs/images/opengl/compare-3-short.png" width="480"> | <img src="docs/images/opengl/compare-4-long-back.png" width="480"> |
+| <img src="docs/images/opengl/compare-5-bob-side.png" width="480"> | <img src="docs/images/opengl/compare-6-wavy.png" width="480"> |
+
+**손상의 흔들림을 어떻게 만들었나**: 가닥마다 정점별 무작위값(화이트 노이즈, 왼쪽)을 쓰면 가닥이 각지고 지글거립니다.
+가닥을 따라 연속적으로 변하는 절차적 노이즈(오른쪽)를 쓰면 실제 손상된 머리카락처럼 부드럽게 흩날립니다. 프로토타입에서 `7`번 키로 전환해서 비교할 수 있습니다.
+
+<img src="docs/images/opengl/noise-white-vs-procedural.png" width="720">
+
+---
+
 ## 주요 기능
 
 ### 모발 손상 표현
@@ -51,6 +78,7 @@ opengl-prototype/      OpenGL 3.3 프로토타입 (C++, GLFW, GLAD, GLM)
 unity-demo/            Unity 6000.3.25f1, URP 17.3 프로젝트
   Assets/HairDemo/Scripts/       컨트롤러, UI, 헤어 로더, 두상 맞춤, 두피 마스크
   Assets/Resources/HairDemo/     HairMarschner.shader, HeadSkin.shader, HairCommon.hlsl
+docs/images/           결과 이미지 (unity/, opengl/)
 THIRD_PARTY_NOTICES.md  출처와 라이선스
 ```
 
