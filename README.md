@@ -142,4 +142,9 @@ cmake --build build --config Release
 - `cyHairFile.h`: Cem Yuksel (MIT)
 
 ## 라이선스
-아직 정하지 않았습니다(별도 라이선스를 붙이기 전까지 모든 권리 보유). 수업 프로젝트 기반 코드와 외부 데이터의 사용 조건을 정리한 뒤 정할 예정입니다.
+별도의 라이선스를 지정하지 않았습니다. 따라서 이 저장소의 코드를 복제, 재배포, 수정해서 쓰려면 작성자의 허락이 필요합니다.
+채용과 평가를 위해 읽고 확인하는 것은 자유롭게 하셔도 됩니다.
+
+수업 프로젝트(*Let Hair be Light*)에서 출발한 파일(`marschnerHair.frag`, `lookup1.png`, `lookup2.png`)과 외부 데이터/모델의 출처는
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)에 밝혔습니다. 원 저작자나 권리자께서 문제를 제기하시면
+해당 파일을 즉시 제거하겠습니다 (이 저장소의 Issues로 알려주세요).
